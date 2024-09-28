@@ -6,21 +6,13 @@
     "dev": "tsx watch src/server.ts",
     "start": "node build/server.js",
     "build": "tsup src --out-dir build",
-    "lint": "eslint src -ext .ts --fix"
+    "lint": "eslint src -ext .ts --fix",
+    "test": "vitest run --dir src/use-cases"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
-  "devDependencies": {
-    "@rocketseat/eslint-config": "2.2.2",
-    "@types/node": "^22.7.3",
-    "eslint": "8.57.1",
-    "prisma": "5.20.0",
-    "tsup": "^8.3.0",
-    "tsx": "^4.19.1",
-    "typescript": "^5.6.2"
-  },
   "dependencies": {
     "@prisma/client": "5.20.0",
     "@types/bcryptjs": "2.4.6",
@@ -28,5 +20,18 @@
     "dotenv": "16.4.5",
     "fastify": "^5.0.0",
     "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "9.0.3",
+    "@rocketseat/eslint-config": "2.2.2",
+    "@types/node": "^22.7.3",
+    "eslint": "8.57.1",
+    "install": "0.13.0",
+    "prisma": "5.20.0",
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2",
+    "vite-tsconfig-paths": "5.0.1",
+    "vitest": "2.1.1"
   }
 }
