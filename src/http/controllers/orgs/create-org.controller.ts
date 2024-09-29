@@ -3,7 +3,10 @@ import { makeCreateOrgUseCase } from '@/use-cases/factories/make-creat-org-use-c
 import { FastifyRequest, FastifyReply } from 'fastify'
 import { z } from 'zod'
 
-export async function create(request: FastifyRequest, reply: FastifyReply) {
+export async function createOrgController(
+  request: FastifyRequest,
+  reply: FastifyReply,
+) {
   const createOrgBodySchema = z.object({
     name: z.string(),
     author_name: z.string(),

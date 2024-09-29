@@ -22,7 +22,7 @@ model Org {
   cep         String
   state       String
   city        String
-  neighbohood String 
+  neighbohood String
   street      String
 
   //Coordenadas
@@ -36,12 +36,13 @@ model Org {
 
 model Pet {
   //Dados pets
-  id           String  @id @default(uuid())
+  id           String @id @default(uuid())
   name         String
   about        String
   age          Int
-  size_cm      Int
-  energy_level Int
+  size         String
+  energy_level String
+  environment  String
   org_id       String
 
   org Org @relation(fields: [org_id], references: [id])
