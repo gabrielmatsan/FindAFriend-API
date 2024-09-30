@@ -22,6 +22,8 @@ export class FetchNearbyOrgsUseCase {
       longitude: userLongitude,
     })
 
-    return { orgs }
+    return {
+      orgs,
+    }
   }
 }

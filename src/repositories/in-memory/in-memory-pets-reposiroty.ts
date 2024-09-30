@@ -1,7 +1,7 @@
-import type { Pet, Prisma } from '@prisma/client'
-import type { FindAllParams, PetsRepository } from '../pets-repository'
-import { randomUUID } from 'crypto'
 import { InMemoryOrgsRepository } from './in-memory-orgs-repository'
+import { Pet, Prisma } from '@prisma/client'
+import { FindAllParams, PetsRepository } from '../pets-repository'
+import { randomUUID } from 'crypto'
 
 export class InMemoryPetsRepository implements PetsRepository {
   public items: Pet[] = []

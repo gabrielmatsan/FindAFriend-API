@@ -93,12 +93,12 @@ describe('Search Pet Use Case', () => {
     await petsRepository.create(
       makePet({ org_id: org.id, environment: 'outdoor' }),
     )
-    console.log(org.city)
 
     const { pets } = await sut.execute({
       city: org.city,
       environment: 'outdoor',
     })
-    expect(pets).toHaveLength(1) // 2 pets, only with the environment chosen
+
+    expect(pets).toHaveLength(1) // 2 pets, only with the size chosen
   })
 })
