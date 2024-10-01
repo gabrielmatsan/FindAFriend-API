@@ -25,6 +25,7 @@ export async function createPetsController(
   try {
     const { pet } = await createPetUseCase.execute({ ...body, org_id })
 
+    console.log('Pet Created:', pet)
     return reply.status(201).send(pet)
   } catch (error) {
     if (error instanceof OrgNotFoundError) {
