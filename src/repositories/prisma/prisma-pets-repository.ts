@@ -18,6 +18,7 @@ export class PrismaPetsRepository implements PetsRepository {
   async findAll(params: FindAllParams): Promise<Pet[]> {
     const pets = await prisma.pet.findMany({
       where: {
+        environment: params.environment,
         age: params.age,
         size: params.size,
         energy_level: params.energy_level,
